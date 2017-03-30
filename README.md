@@ -1,5 +1,5 @@
 # BioProject2
-Aligning sequences with Needleman-Wunsch or Smith-Waterman
+Aligning sequences with Needleman-Wunsch or Smith-Waterman(https://github.com/Droom1995/BioProject2)
 
 # Algorithm description
 For both algorithms, standard DP approach with insert/delete/match functions was implemented.  
