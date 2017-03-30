@@ -9,6 +9,8 @@ For further alignment, I remember every step for DP matrix in a different path m
 2 - left(deletion/insertion);  
 3 - diagonal (match);  
 
+Algorithms with supporting functions are listed in alignment.py source file. Alignment algorithms accept next parameters: seq1 - first sequence, seq2 - second sequence, letters - letter order for alignment matrix, blosum62 - alignment matrix, gap_p - gap penalty.
+
 # Execution results
 ./main.py -g -s1 A0PQ23.fasta -s2 Q9CD83.fasta -e blosum62.csv -p 4
 M--T---NR--T---LSREEIRKLDRDLRILVATNGTLTRVLNVVANEEIVVDIINQQLLDVAPKIPELENLKIGRILQRDILLKGQKSGILFVAAESLIVIDLLPTAITTYLTKTHHPIGEIMAASRIETYKEDAQVWIGDLPCWL-ADYGYWDLPKRAVGRRYRIIAGGQPVIITTEYFLRSVFQDTPREELDRCQYSNDIDTRSGDRFVLHGRVFKNL  
