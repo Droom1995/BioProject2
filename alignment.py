@@ -25,7 +25,7 @@ def needlman_wunsch(seq1, seq2, letters, blosum62, gap_p):
                 path[i][j] = 3  # diagonal
     align1, align2 = find_alignment(seq1=seq2, seq2=seq1, path=path, max_i=m, max_j=n, global_sym='-')
 
-    return align1, align2, dp[m][n]
+    return align1, align2, int(dp[m][n])
 
 
 def smith_waterman(seq1, seq2, letters, blosum62, gap_penalty):
@@ -43,7 +43,7 @@ def smith_waterman(seq1, seq2, letters, blosum62, gap_penalty):
             score_left = dp[i - 1][j] + gap_penalty
             dp[i][j] = max(0, score_left, score_up, score_diagonal)
             if dp[i][j] == 0:
-                path[i][j] = 0
+                path[i][j] = 0 # cut path
             if dp[i][j] == score_left:
                 path[i][j] = 1  # up
             if dp[i][j] == score_up:
@@ -55,7 +55,7 @@ def smith_waterman(seq1, seq2, letters, blosum62, gap_penalty):
                 max_j = j
                 max_score = dp[i][j]
     align1, align2 = find_alignment(seq1, seq2, path, max_i, max_j)
-    return align1, align2, dp[max_i][max_j]
+    return align1, align2, int(dp[max_i][max_j])
 
 
 def match_score(a, b, letters, blosum62):
